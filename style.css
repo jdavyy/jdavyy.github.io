@@ -1,9 +1,33 @@
-header {
-    text-align: center; /* Center align the content of your header */
-    padding: 20px; /* Add some padding around the content */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 .header-image {
-    width: 100%; /* Make the image fill the width of the header */
-    height: auto; /* Adjust the height automatically */
+    width: 100%;
+    height: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+#contact a {
+    color: #0077b5; /* LinkedIn Blue */
 }

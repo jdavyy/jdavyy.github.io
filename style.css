@@ -1,0 +1,9 @@
+header {
+    text-align: center; /* Center align the content of your header */
+    padding: 20px; /* Add some padding around the content */
+}
+
+.header-image {
+    width: 100%; /* Make the image fill the width of the header */
+    height: auto; /* Adjust the height automatically */
+}

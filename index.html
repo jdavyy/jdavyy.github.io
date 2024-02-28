@@ -22,16 +22,29 @@
             padding: 1rem;
         }
 
+        /* Basic styling for the navigation links */
         .navbar a {
+            display: inline-block;
+            padding: 10px 15px;
+            margin: 0 5px;
+            background-color: transparent;
+            color: #000; /* Or any color you prefer */
             text-decoration: none;
-            color: white; /* Adjust color as needed */
-            padding: 10px;
-            transition: all 0.3s ease;
+            transition: all 0.2s ease-in-out; /* Smooth transition for hover and active states */
+            border-radius: 5px; /* Optional: if you want rounded corners */
         }
 
+        /* Hover effect */
         .navbar a:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background-color: #f0f0f0; /* Slight background color change on hover */
+            transform: translateY(-2px); /* Moves the link up */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow on hover */
+        }
+
+        /* Active (clicked) effect */
+        .navbar a:active {
+            transform: translateY(1px); /* Moves the link slightly down to simulate pressing */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adjusts the shadow to simulate 'pressing down' */
         }
         
         .navbar a {

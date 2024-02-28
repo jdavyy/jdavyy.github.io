@@ -82,6 +82,18 @@
             <button class="email-button">Email Me</button>
         </a>     
     </section>
-    <script src="script.js"></script>
+    <script>
+        // This script waits for the DOM to load before running
+        document.addEventListener('DOMContentLoaded', function() {
+        // Get the checkbox element
+            var nightModeToggle = document.getElementById('night-mode-toggle');
+            // Listen for click events on the checkbox
+            nightModeToggle.addEventListener('change', function() {
+            // When the checkbox is checked or unchecked, toggle the 'night-mode' class on the body
+                document.body.classList.toggle('night-mode', nightModeToggle.checked);
+            });
+          });
+    </script>
+
 </body>
 </html>

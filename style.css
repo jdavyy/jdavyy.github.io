@@ -202,6 +202,11 @@ input:checked + .slider:before {
 .night-mode .contact {
     background-color: #1f1e1e; /* dark grey background */
     color: #fff; /* white text */
+    border-top: 1px solid #2a2a2a; /* Darker top border for separation */
+    border-bottom: 1px solid #2a2a2a; /* Darker bottom border for separation */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Optional: subtle shadow for depth */
+    padding-top: 20px; /* Add padding to the top */
+    padding-bottom: 20px; /* Add padding to the bottom */
 }
 
 .header-content {

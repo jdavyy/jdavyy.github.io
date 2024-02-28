@@ -196,6 +196,14 @@ input:checked + .slider:before {
   color: #ffffff; /* Ensure text is visible */
 }
 
+.night-mode .about,
+.night-mode .skills,
+.night-mode .projects,
+.night-mode .contact {
+    background-color: #1f1e1e; /* dark grey background */
+    color: #fff; /* white text */
+}
+
 
         .header-content {
             text-align: center;

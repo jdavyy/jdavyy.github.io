@@ -186,7 +186,7 @@ input:checked + .slider:before {
 
 /* Night mode styles */
 .night-mode {
-  background-color: #131862; /* Dark blue, you can choose any color you want */
+  background-color: #1f1e1e; /* Dark gray, you can choose any color you want */
   color: #ffffff; /* Change text color to white or light color */
 }
 

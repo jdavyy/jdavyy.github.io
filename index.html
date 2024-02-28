@@ -40,12 +40,24 @@
             z-index: 10; /* To ensure it's above other elements */
         }
 
-        /* Style for each button */
+        .icon-button img {
+        /* Set a specific size for the icons */
+        width: 32px; /* Adjust width as needed */
+        height: auto; /* This will maintain the aspect ratio */
+        }
+
+        /* Additional styles for the button if needed */
         .icon-button {
-            background: none; /* No background for the button */
-            border: none; /* No border for the button */
-            cursor: pointer; /* Cursor changes to pointer to indicate it's clickable */
-            margin-left: 10px; /* Space between buttons, if you have multiple */
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            margin: 0 5px; /* This adds space between the buttons */
+        }    
+
+        /* Ensure the buttons have no outline when focused for a cleaner look */
+        .icon-button:focus {
+            outline: none;
         }
 
         .header-content {

@@ -184,6 +184,18 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+/* Night mode styles */
+.night-mode {
+  background-color: #131862; /* Dark blue, you can choose any color you want */
+  color: #ffffff; /* Change text color to white or light color */
+}
+
+/* Adjust the night-mode styles for other elements as needed */
+.night-mode .navbar, .night-mode .content, .night-mode footer {
+  background-color: #161b40; /* Darker shade for containers */
+  color: #ffffff; /* Ensure text is visible */
+}
+
 
         .header-content {
             text-align: center;

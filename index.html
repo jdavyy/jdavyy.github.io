@@ -23,28 +23,36 @@
         }
 
         /* Basic styling for the navigation links */
-        .navbar a {
+        /*.navbar a {
             display: inline-block;
             padding: 10px 15px;
             margin: 0 5px;
             background-color: transparent;
             color: #000; /* Or any color you prefer */
-            text-decoration: none;
+            /* text-decoration: none;
             transition: all 0.2s ease-in-out; /* Smooth transition for hover and active states */
-            border-radius: 5px; /* Optional: if you want rounded corners */
+            /* border-radius: 5px; /* Optional: if you want rounded corners */
+        /*} */
+
+        .navbar a {
+            color: #FFFFFF; /* Starting color for the text */
+            padding: 10px 15px;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out; /* Animate the color change */
+            /* Other styles as necessary */
         }
 
         /* Hover effect */
         .navbar a:hover {
-            background-color: #f0f0f0; /* Slight background color change on hover */
-            transform: translateY(-2px); /* Moves the link up */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow on hover */
+            color: #CCCCCC; /* New color for text on hover */
+            background-color: transparent; /* Ensure the background doesn't change */
+            /* Remove any other styles that might add unwanted background or box shadows */
         }
 
         /* Active (clicked) effect */
         .navbar a:active {
-            transform: translateY(1px); /* Moves the link slightly down to simulate pressing */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adjusts the shadow to simulate 'pressing down' */
+            color: #BBBBBB; /* Optional: Further change color on click if desired */
+            /* Other styles as necessary */
         }
         
         .navbar a {

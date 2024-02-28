@@ -41,20 +41,27 @@
         }
 
         .icon-button img {
-        /* Set a specific size for the icons */
-        width: 65px; /* Adjust width as needed */
-        height: auto; /* This will maintain the aspect ratio */
+            /* Set a specific size for the icons */
+            width: 65px; /* Adjust width as needed */
+            height: auto; /* This will maintain the aspect ratio */
+            transition: transform 0.1s ease; /* Smooth transition for the effect */
+        }
+        
+        .icon-button {
+            display: inline-block;
+            margin: 0 10px;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            outline: none;
+            padding: 0;
         }
 
-        /* Additional styles for the button if needed */
-        .icon-button {
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 0;
-            margin: 0 5px; /* This adds space between the buttons */
-        }    
-
+        /* This will scale the icon a bit down giving the effect that it's being pressed */
+        .icon-button:active img {
+            transform: scale(0.9);
+        }
+        
         /* Ensure the buttons have no outline when focused for a cleaner look */
         .icon-button:focus {
             outline: none;

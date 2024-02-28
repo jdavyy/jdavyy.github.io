@@ -146,7 +146,7 @@ nav ul li a {
   bottom: 0;
   background-color: #ccc; /* Light mode color */
   -webkit-transition: .4s;
-  transition: .4s;
+  transition: .7s;
 }
 
 .slider:before {
@@ -192,7 +192,7 @@ input:checked + .slider:before {
 
 /* Adjust the night-mode styles for other elements as needed */
 .night-mode .navbar, .night-mode .content, .night-mode footer {
-  background-color: #161b40; /* Darker shade for containers */
+  background-color: ##1f1e1e; /* Darker shade for containers */
   color: #ffffff; /* Ensure text is visible */
 }
 

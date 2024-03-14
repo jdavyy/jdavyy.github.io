@@ -257,7 +257,7 @@ input:checked + .slider:before {
 .skills-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: start;
+    justify-content: flex-start;
     gap: 10px; /* Controls the space between items */
     padding: 0;
     margin: 0 auto; /* Center the container */
@@ -265,6 +265,9 @@ input:checked + .slider:before {
 }
 
 .skill {
+    min-width: calc((960px - (4 * 10px)) / 5);
+    flex-grow: 1;
+    flex-shrink: 0; /* Prevent the items from shrinking smaller than their min-width */
     padding: 8px 16px;
     margin-bottom: 10px; /* Space at the bottom of each skill for when they wrap */
     font-size: 16px;

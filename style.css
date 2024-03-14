@@ -303,6 +303,7 @@ input:checked + .slider:before {
     transform: translateY(4px); /* Button looks like it's being pressed */
 }
 .about, .skills, .projects, .contact {
+    text-align: center;
     padding: 2rem;
     background: #fff;
     margin: 1rem;

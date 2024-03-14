@@ -265,9 +265,7 @@ input:checked + .slider:before {
 }
 
 .skill {
-    flex-basis: calc(20% - 10px)
-    flex-grow: 0;
-    flex-shrink: 0; /* Prevent the items from shrinking smaller than their min-width */
+    flex: 0 0 calc(20% - 10px); /* Do not grow or shrink, maintain base size */
     padding: 8px 16px;
     margin-bottom: 10px; /* Space at the bottom of each skill for when they wrap */
     font-size: 16px;

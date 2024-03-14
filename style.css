@@ -325,7 +325,7 @@ input:checked + .slider:before {
     transition: transform 0.1s ease, box-shadow 0.1s ease; /* Smooth transition for transform and box-shadow */
 }
         
-        /* Add smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
+/* Add smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}

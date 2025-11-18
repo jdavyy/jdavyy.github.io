@@ -14,7 +14,7 @@ const initialWindows = [
     id: 'about', 
     title: 'About Jack.davy', 
     path: '/about', 
-    // FIX: Use the renamed icon
+    // FIX: Using the renamed HomeIcon
     icon: <HomeIcon className="w-5 h-5" />, 
     initialX: 50, 
     initialY: 50, 

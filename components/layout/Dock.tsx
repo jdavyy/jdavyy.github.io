@@ -1,75 +1,56 @@
-
-// components/layout/Dock.tsx
 'use client'
-import React from 'react';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import { Home, NotebookText, Code, Mail } from 'lucide-react';
-import { usePathname } from 'next/navigation';
+import { motion } from 'framer-motion'
+import Link from 'next/link'
+import { Home, Code, NotebookText, Mail } from 'lucide-react'
 
-interface DockItemProps {
-  href: string;
-  icon: React.ReactNode;
-  label: string;
+// Define the apps that appear in the dock
+const dockItems = [
+  { 
+    name: 'Home', 
+    icon: <Home className="w-5 h-5" />, 
+    href: '/jdavyy' 
+  },
+  { 
+    name: 'Projects', 
+    icon: <Code className="w-5 h-5" />, 
+    href: '/jdavyy/projects' 
+  },
+  { 
+    name: 'RAG Lab', 
+    icon: <NotebookText className="w-5 h-5" />, 
+    href: '/jdavyy/rag-lab' 
+  },
+  { 
+    name: 'Contact', 
+    icon: <Mail className="w-5 h-5" />, 
+    href: '/jdavyy/contact' 
+  },
+]
+
+const Dock = () => {
+  return (
+    <motion.div
+      initial={{ y: 100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.8, delay: 1 }}
+      className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50"
+    >
+      <div className="flex space-x-2 p-3 bg-gray-900/60 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-700/50">
+        {dockItems.map((item) => (
+          <Link href={item.href} key={item.name} passHref>
+            <motion.div
+              className="relative p-2 rounded-xl text-text-primary hover:bg-gray-800/80 transition-all duration-200 cursor-pointer"
+              whileHover={{ scale: 1.1, y: -5 }}
+              whileTap={{ scale: 0.95 }}
+              title={item.name}
+            >
+              {item.icon}
+            </motion.div>
+          </Link>
+        ))}
+      </div>
+    </motion.div>
+  )
 }
 
-const DockItem: React.FC<DockItemProps> = ({ href, icon, label }) => {
-  const pathname = usePathname();
-  // Check if pathname matches href or the root path with basePath applied
-  const isActive = pathname === href || (href === '/' && pathname === '/jdavyy'); 
-  
-  // Adjust links for GitHub Pages basePath (important for client-side navigation)
-  const basePath = '/jdavyy'; // MUST match next.config.js
-  const linkHref = `${basePath}${href}`;
-
-
-  return (
-    <Link href={linkHref} passHref>
-      <motion.div
-        whileHover={{ y: -10, scale: 1.15 }}
-        whileTap={{ scale: 0.95 }}
-        className={`relative p-3 rounded-xl transition-colors cursor-pointer ${
-          isActive ? 'bg-neon-blue/30 shadow-neon-glow' : 'hover:bg-dark-border/80'
-        }`}
-        title={label}
-      >
-        <div className={`w-6 h-6 ${isActive ? 'text-neon-blue' : 'text-text-primary'}`}>
-          {icon}
-        </div>
-        {isActive && (
-          <motion.div
-            layoutId="dock-indicator" 
-            className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-neon-blue"
-          />
-        )}
-      </motion.div>
-    </Link>
-  );
-};
-
-const Dock: React.FC = () => {
-  const dockItems = [
-    { href: '/', icon: <Home />, label: 'Home OS' },
-    { href: '/about', icon: <NotebookText />, label: 'About' },
-    { href: '/projects', icon: <Code />, label: 'Projects Lab' },
-    { href: '/rag-lab', icon: <NotebookText />, label: 'RAG Simulator' },
-    { href: '/contact', icon: <Mail />, label: 'Contact' },
-  ];
-
-  return (
-    <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50">
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.5, type: 'spring', stiffness: 100 }}
-        className="flex space-x-4 p-3 bg-dark-card/90 backdrop-blur-xl border border-dark-border rounded-2xl shadow-neon-glow"
-      >
-        {dockItems.map((item) => (
-          <DockItem key={item.href} {...item} />
-        ))}
-      </motion.div>
-    </div>
-  );
-};
-
-export default Dock;
+export default Dock

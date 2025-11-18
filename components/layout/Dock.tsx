@@ -1,7 +1,7 @@
 'use client'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { Home, Code, NotebookText, Mail } from 'lucide-react'
+import { Home, Code, NotebookPen, Mail } from 'lucide-react'
 
 // Define the apps that appear in the dock
 const dockItems = [
@@ -17,7 +17,7 @@ const dockItems = [
   },
   { 
     name: 'RAG Lab', 
-    icon: <NotebookText className="w-5 h-5" />, 
+    icon: <NotebookPen className="w-5 h-5" />, 
     href: '/jdavyy/rag-lab' 
   },
   { 

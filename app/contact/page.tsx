@@ -1,7 +1,7 @@
 'use client'
 import { motion } from 'framer-motion'
 // FIX: Changed 'GitHub' to 'Github' (lowercase 'h')
-import { GitHub, Linkedin, Rss, MessageSquare } from 'lucide-react' 
+import { Github, Linkedin, Rss, MessageSquare } from 'lucide-react' 
 import { useState } from 'react'
 
 // IMPORTANT: Replace this with your actual FormSubmit endpoint (e.g., your email address or hash)

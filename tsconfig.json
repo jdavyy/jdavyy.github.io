@@ -1,4 +1,3 @@
-
 {
   "compilerOptions": {
     "target": "es5",
@@ -20,7 +19,7 @@
         "name": "next"
       }
     ],
-    // FIX FOR @/ PATH ALIAS
+    // FIX for @/ import aliases
     "paths": {
       "@/*": ["./*"]
     }

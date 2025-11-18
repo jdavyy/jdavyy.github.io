@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
-// Note: Removed the unused 'Inter' font import for simplicity
-// FIX: Change '../globals.css' to './globals.css'
+// FIX: Using the correct relative path for the global CSS file
 import './globals.css' 
 import Dock from '@/components/layout/Dock'
 

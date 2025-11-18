@@ -6,7 +6,7 @@ import { useState } from 'react'
 
 // IMPORTANT: Replace this with your actual FormSubmit endpoint (e.g., your email address or hash)
 // I am using a placeholder URL here. You need to configure this to receive messages.
-const FORM_ENDPOINT = "https://formsubmit.co/your-actual-email@example.com"
+const FORM_ENDPOINT = "https://formsubmit.co/jack.davy@gmail.com"
 
 export default function Contact() {
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
